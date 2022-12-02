@@ -33,3 +33,6 @@ Session.vim
 Thumbs.db
 Desktop.ini
 /debug.log
+
+# Disable lock file.
+package-lock.json

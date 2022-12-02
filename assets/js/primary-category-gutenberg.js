@@ -1,10 +1,9 @@
-import PrimaryCategoryInit from './react-components/PrimaryCategoryInit';
+import CategoryInit from './react-components/PrimaryCategoryInit';
 
 function addPrimaryCategoryComponent(PostTaxonomiesComponent) {
-	return (props) => {
+	return ( props ) => {
 		return (
-			<PrimaryCategoryInit
-				TaxonomyComponent={PostTaxonomiesComponent}
+			<CategoryInit TaxonomyComponent={PostTaxonomiesComponent}
 				{...props}
 			/>
 		);

@@ -5,17 +5,23 @@ module.exports = {
 		es6: true,
 		node: true,
 	},
-	extends: [
-		'eslint:recommended',
-		'plugin:@wordpress/eslint-plugin/recommended',
-	],
+	extends: [ 'eslint:recommended', 'prettier', 'plugin:react/recommended' ],
 	parserOptions: {
-		sourceType: 'module',
+		ecmaFeatures: {
+			jsx: true
+		},
+		ecmaVersion: 2018,
+		sourceType: 'module'
 	},
+	plugins: ['react'],
 	rules: {
 		indent: ['error', 'tab'],
 		'linebreak-style': ['error', 'unix'],
 		quotes: ['error', 'single'],
 		semi: ['error', 'always'],
+		'no-console': 'error',
+		'react/react-in-jsx-scope': 'off',
+		'react/display-name': 'off',
+		'react/prop-types': 'off'
 	},
 };
