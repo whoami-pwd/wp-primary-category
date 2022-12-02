@@ -1,0 +1,39 @@
+{
+    "name": "evigdev/primary-category-plugin",
+    "type": "wordpress-plugin",
+    "authors": [
+        {
+            "name": "Alex K.",
+            "email": "aliaksandr.kazhukhouski@gmail.com"
+        }
+    ],
+    "require": {
+        "php": ">=8.1",
+        "psr/container": "^2.0"
+    },
+    "require-dev": {
+        "10up/phpcs-composer": "dev-master"
+    },
+    "config": {
+        "allow-plugins": {
+            "dealerdirect/phpcodesniffer-composer-installer": true
+        }
+    },
+    "scripts": {
+        "lint": [
+            "php -d error_reporting=24575 ./vendor/bin/phpcs -s --standard=./.phpcs.xml.dist --"
+        ],
+        "fix": [
+            "php -d error_reporting=24575 ./vendor/bin/phpcbf -s --standard=./.phpcs.xml.dist --"
+        ],
+        "pot": "wp i18n make-pot . languages/evigdev-primary-category.pot --exclude=node_modules,vendor,build --allow-root"
+    },
+    "autoload": {
+        "psr-4": {
+            "EvigDev\\PrimaryCategory\\": "includes/"
+        },
+        "files": [
+            "helpers.php"
+        ]
+    }
+}

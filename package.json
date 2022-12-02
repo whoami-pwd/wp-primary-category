@@ -1,0 +1,28 @@
+{
+  "name": "evigdev-primary-category",
+  "description": "Simple primary category plugin",
+  "version": "0.0.1",
+  "author": "Alex K.",
+  "engines": {
+    "node": ">=18",
+    "npm": ">=8"
+  },
+  "devDependencies": {
+    "@wordpress/eslint-plugin": "^13.6.0",
+    "@wordpress/scripts": "^24.6.0",
+    "autoprefixer": "^10.4.2",
+    "eslint": "^8.7.0",
+    "lodash-es": "^4.17.21",
+    "lodash.template": "^4.5.0"
+  },
+  "scripts": {
+    "start": "NODE_ENV=development wp-scripts start",
+    "build": "NODE_ENV=production wp-scripts build",
+    "format:js": "wp-scripts format && npm run lint:js -- --fix",
+    "lint:js": "wp-scripts lint-js",
+    "packages-update": "wp-scripts packages-update"
+  },
+  "dependencies": {
+    "lodash": "^4.17.21"
+  }
+}
